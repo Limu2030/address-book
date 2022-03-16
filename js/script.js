@@ -1,5 +1,4 @@
 // business logic
-<<<<<<< HEAD
 function Contact(first, last, city, county) {
   this.firstName = first;
   this.lastName = last;
@@ -46,7 +45,6 @@ $(document).ready(function () {
           alert($(".contact") != 0);
           alert("contact clicked");
           $("#show-contact").show(); 
-=======
 function Contact(first, last) {
     this.firstName = first;
     this.lastName = last;
@@ -71,7 +69,6 @@ function Contact(first, last) {
       if ($(".contact") != 0) {
         $(".contact").last().click(function() {
           $("#show-contact").show(); // show-contact
->>>>>>> 84f0edcc8b49fce329dc86aa0734ffe25b4a7da2
           $("#show-contact h2").text(newContact.firstName);
           $(".first-name").text(newContact.firstName);
           $(".last-name").text(newContact.lastName);
