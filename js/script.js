@@ -1,4 +1,5 @@
 // business logic
+<<<<<<< HEAD
 function Contact(first, last, city, county) {
   this.firstName = first;
   this.lastName = last;
@@ -45,6 +46,32 @@ $(document).ready(function () {
           alert($(".contact") != 0);
           alert("contact clicked");
           $("#show-contact").show(); 
+=======
+function Contact(first, last) {
+    this.firstName = first;
+    this.lastName = last;
+  }
+  
+  // user interface logic
+  $(document).ready(function() {
+    $("form#new-contact").submit(function(event) {
+      event.preventDefault();
+  
+      var inputtedFirstName = $("input#new-first-name").val();
+      var inputtedLastName = $("input#new-last-name").val();
+      if (inputtedFirstName.length != ""){
+        var newContact = new Contact(inputtedFirstName, inputtedLastName);
+  
+        $("ul#contacts").append("<li><span class=\"contact\">" + newContact.firstName + " " + newContact.lastName + "</span></li>");
+    
+        $("input#new-first-name").val("");
+        $("input#new-last-name").val("");
+      }
+
+      if ($(".contact") != 0) {
+        $(".contact").last().click(function() {
+          $("#show-contact").show(); // show-contact
+>>>>>>> 84f0edcc8b49fce329dc86aa0734ffe25b4a7da2
           $("#show-contact h2").text(newContact.firstName);
           $(".first-name").text(newContact.firstName);
           $(".last-name").text(newContact.lastName);
