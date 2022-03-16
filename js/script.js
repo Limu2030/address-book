@@ -22,8 +22,6 @@ function Contact(first, last) {
 
       if ($(".contact") != 0) {
         $(".contact").last().click(function() {
-          alert($(".contact") != 0)
-          alert("contact clicked")
           $("#show-contact").show(); // show-contact
           $("#show-contact h2").text(newContact.firstName);
           $(".first-name").text(newContact.firstName);
